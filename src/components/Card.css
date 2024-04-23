@@ -1,0 +1,39 @@
+/* Estilos para o componente Card */
+.card {
+    width: 90%;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 200px; /* Altura fixa */
+    overflow: hidden; /* Para garantir que o conteúdo não ultrapasse a altura */
+    background-color: #fff; /* Cor de fundo padrão */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    color:#fff;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    display: grid;
+    width: 90%;
+    align-items: center;
+    height: calc(100% - 40px); /* Altura do card menos a altura do header */
+  }
+  
+  .count {
+    justify-self: self-end;
+    font-size: 70px;
+  }
+
+  .description{
+    font-size: 20px;
+  }

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Dashboard from './components/Dashboard';
+import Janela from './components/Janela'; // Importe o componente Janela
 
 function App() {
+  const [showJanela, setShowJanela] = useState(false);
+
+  const handleCardClick = () => {
+    setShowJanela(true);
+  };
+
+  const handleCloseJanela = () => {
+    setShowJanela(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="sidebar">
+        {/* Conteúdo da barra lateral, se necessário */}
+      </div>
+      <div className="main-content">
+        <Header />
+        <Dashboard onCardClick={handleCardClick} /> {/* Passe a função de clique para o Dashboard */}
+        <Footer />
+      </div>
+      {showJanela && <Janela onClose={handleCloseJanela} />} {/* Renderize o componente Janela fora do Dashboard */}
     </div>
   );
 }

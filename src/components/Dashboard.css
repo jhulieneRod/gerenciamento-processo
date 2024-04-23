@@ -1,0 +1,11 @@
+/* Dashboard.css */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center; /* Centraliza os items horizontalmente */
+    align-items: center; /* Centraliza os items verticalmente */
+    flex-grow: 1;
+    background-color: rgb(233, 233, 233);
+  }
+  
